@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1 (branches/2.1-6728; 2011-02-03T14:14:58+0000) JAXWS-RI/2.2.3 JAXWS/2.2. --><xs:schema xmlns:tns="http://EPEC_Interop/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://EPEC_Interop/">
+
+<xs:element name="obtenerDictadoMateriasxProgramaVersion" type="tns:obtenerDictadoMateriasxProgramaVersion" />
+
+<xs:element name="obtenerDictadoMateriasxProgramaVersionResponse" type="tns:obtenerDictadoMateriasxProgramaVersionResponse" />
+
+<xs:element name="obtenerDictadosMateriaxDocente" type="tns:obtenerDictadosMateriaxDocente" />
+
+<xs:element name="obtenerDictadosMateriaxDocenteResponse" type="tns:obtenerDictadosMateriaxDocenteResponse" />
+
+<xs:element name="obtenerDocentesxProgramaVersion" type="tns:obtenerDocentesxProgramaVersion" />
+
+<xs:element name="obtenerDocentesxProgramaVersionResponse" type="tns:obtenerDocentesxProgramaVersionResponse" />
+
+<xs:element name="obtenerEstudiantesxDictado" type="tns:obtenerEstudiantesxDictado" />
+
+<xs:element name="obtenerEstudiantesxDictadoResponse" type="tns:obtenerEstudiantesxDictadoResponse" />
+
+<xs:element name="obtenerEstudiantesxProgramaVersion" type="tns:obtenerEstudiantesxProgramaVersion" />
+
+<xs:element name="obtenerEstudiantesxProgramaVersionResponse" type="tns:obtenerEstudiantesxProgramaVersionResponse" />
+
+<xs:complexType name="obtenerDictadoMateriasxProgramaVersion">
+<xs:sequence>
+<xs:element name="codprogversion" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerDictadoMateriasxProgramaVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:dictadoMateriaServicio" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dictadoMateriaServicio">
+<xs:sequence>
+<xs:element name="coddocente" type="xs:int" />
+<xs:element name="codmateria" type="xs:string" minOccurs="0" />
+<xs:element name="codparalelo" type="xs:string" minOccurs="0" />
+<xs:element name="codprogramaversion" type="xs:string" minOccurs="0" />
+<xs:element name="fechaasennot" type="xs:string" minOccurs="0" />
+<xs:element name="fechafin" type="xs:string" minOccurs="0" />
+<xs:element name="fechainicio" type="xs:string" minOccurs="0" />
+<xs:element name="modulo" type="xs:string" minOccurs="0" />
+<xs:element name="nivel" type="xs:string" minOccurs="0" />
+<xs:element name="nombremateria" type="xs:string" minOccurs="0" />
+<xs:element name="nombreprogramaversion" type="xs:string" minOccurs="0" />
+<xs:element name="paralelo" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerEstudiantesxProgramaVersion">
+<xs:sequence>
+<xs:element name="codprogversion" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerEstudiantesxProgramaVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:estudianteWebServicio" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="estudianteWebServicio">
+<xs:sequence>
+<xs:element name="apellidos" type="xs:string" minOccurs="0" />
+<xs:element name="cedula" type="xs:string" minOccurs="0" />
+<xs:element name="codigo" type="xs:long" />
+<xs:element name="mail" type="xs:string" minOccurs="0" />
+<xs:element name="nombres" type="xs:string" minOccurs="0" />
+<xs:element name="pasaporte" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerEstudiantesxDictado">
+<xs:sequence>
+<xs:element name="intcoddococente" type="xs:int" />
+<xs:element name="codprogversion" type="xs:string" minOccurs="0" />
+<xs:element name="codmateria" type="xs:string" minOccurs="0" />
+<xs:element name="codparalelo" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerEstudiantesxDictadoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:estudianteWebServicio" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerDictadosMateriaxDocente">
+<xs:sequence>
+<xs:element name="documento" type="xs:string" minOccurs="0" />
+<xs:element name="tipo" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerDictadosMateriaxDocenteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:dictadoMateriaServicio" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerDocentesxProgramaVersion">
+<xs:sequence>
+<xs:element name="codprogversion" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerDocentesxProgramaVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:docenteServicio" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="docenteServicio">
+<xs:sequence>
+<xs:element name="apellidos" type="xs:string" minOccurs="0" />
+<xs:element name="codigo" type="xs:int" />
+<xs:element name="documento" type="xs:string" minOccurs="0" />
+<xs:element name="email" type="xs:string" minOccurs="0" />
+<xs:element name="nombres" type="xs:string" minOccurs="0" />
+<xs:element name="tipodoc" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
